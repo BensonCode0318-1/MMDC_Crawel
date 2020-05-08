@@ -56,18 +56,3 @@ for i in root[0].findall('row'):
 json_str = json.dumps(dic)
 print(json_str)
 r = requests.post("https://bbe6661a.ngrok.io/api/Py", data=json_str)
-    
-
-"""
-with open(r'/Users/bensonChang/Downloads/每日廣告活動 (1).csv','r') as fl:
-    data = pd.read_csv(fl,engine = 'python',delimiter="\t",skiprows=2)
-    #print(data['廣告活動'].values)
-    count = 1
-    dic = {}
-    for val in data.values:
-        #print(val[0].split(','))
-        dic[count] = val[0]
-        count+=1
-    print(dic)
-    r = requests.post("https://5710efd0.ngrok.io/api/Py", data=dic)
-    """
