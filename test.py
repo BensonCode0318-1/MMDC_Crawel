@@ -1,5 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
+from time import sleep
+
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
