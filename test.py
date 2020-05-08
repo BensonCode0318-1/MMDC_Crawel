@@ -6,6 +6,7 @@ chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--no-sandbox')
 chrome_options.add_argument("--start-maximized")
+chrome_options.add_argument('--disable-gpu') 
 chrome_options.add_argument('--disable-dev-shm-usage')
 prefs = {"profile.default_content_settings.popups": 0,
                  "download.default_directory": r"/home/chih_he_taiwan/MMDC_Crawel/", # IMPORTANT - ENDING SLASH V IMPORTANT
