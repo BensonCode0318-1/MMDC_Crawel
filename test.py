@@ -11,6 +11,7 @@ prefs = {"profile.default_content_settings.popups": 0,
 chrome_options.add_experimental_option("prefs", prefs)
 driver = webdriver.Chrome(chrome_options=chrome_options)
 driver.get('https://mail.google.com/')
+driver.maximize_window()
 driver.find_element_by_id('identifierId').send_keys('chih.he.taiwan@gmail.com')
 sleep(2) 
 driver.find_element_by_class_name('CwaK9').click()
