@@ -4,7 +4,7 @@ import json,requests
 import pandas as pd
 import xml.etree.ElementTree as XET
 
-"""
+
 driver = webdriver.Chrome()
 driver.get('https://mail.google.com/')
 driver.maximize_window()
@@ -26,8 +26,8 @@ driver.find_element_by_class_name("zA").click()
 sleep(2)
 driver.find_element_by_link_text("查看報表").click()
 
-sleep(30)
-"""
+sleep(25)
+
 
 tree = XET.parse(r'/Users/bensonChang/Downloads/廣告活動.xml')
 root = tree.getroot() 
@@ -55,4 +55,4 @@ for i in root[0].findall('row'):
 
 json_str = json.dumps(dic)
 print(json_str)
-r = requests.post("https://bbe6661a.ngrok.io/api/Py", data=json_str)
+r = requests.post("https://8d52e83c.ngrok.io/api/Py", data=json_str)
